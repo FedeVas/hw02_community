@@ -1,7 +1,7 @@
-import imp
 from django.contrib import admin
 from .models import Post, Group
 # Register your models here.
+
 
 class PostAdmin(admin.ModelAdmin):
     list_display = ('pk', 'text', 'pub_date', 'author', 'group',)

@@ -1,6 +1,6 @@
-from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render, get_object_or_404
 from .models import Group, Post
+
 
 def index(request):
     posts = Post.objects.order_by('-pub_date')[:10]
