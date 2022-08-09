@@ -1,6 +1,5 @@
 from django.contrib import admin
 from .models import Post, Group
-# Register your models here.
 
 
 class PostAdmin(admin.ModelAdmin):
@@ -14,7 +13,7 @@ class PostAdmin(admin.ModelAdmin):
 class GroupAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug', 'description',)
     list_editable = ('description',)
-    prepopulated_fields = {"slug": ("title",)}
+    prepopulated_fields = {'slug': ('title',)}
     empty_value_display = '-пусто-'
 
 
