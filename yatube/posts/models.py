@@ -1,3 +1,4 @@
+from tabnanny import verbose
 from django.db import models
 from django.contrib.auth import get_user_model
 
@@ -28,6 +29,11 @@ class Post(models.Model):
         verbose_name='Группа',
         related_name='posts',
     )
+
+    class Meta:
+        ordering = ('-pub_date',)
+        verbose_name = 'Пост'
+        verbose_name_plural = 'Посты'
 
 
 class Group(models.Model):

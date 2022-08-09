@@ -7,8 +7,8 @@
 {% block content %}
   <!-- класс py-5 создает отступы сверху и снизу блока -->
   <div class="container py-5">     
-    <h1>Лев Толстой - зеркало русской революции. </h1>
-    <p> Группа "{{ group }}" </P>
+    <h1>Группа "{{ group }}" </h1>
+    <p> {{ group.description }} </P>
   <article>
     {% for post in posts %}
       <ul>
