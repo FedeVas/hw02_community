@@ -34,6 +34,9 @@ class Post(models.Model):
         verbose_name = 'Пост'
         verbose_name_plural = 'Посты'
 
+    def __str__(self) -> str:
+        return self.text
+
 
 class Group(models.Model):
     title = models.CharField(
